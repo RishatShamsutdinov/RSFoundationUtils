@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.summary      = "Utils for Foundation."
 
   s.description  = <<-DESC
-                   Utils for Foundation.
+                   Utils for Foundation + Some additional classes.
                    DESC
 
   s.homepage     = "https://github.com/RishatShamsutdinov/RSFoundationUtils"
