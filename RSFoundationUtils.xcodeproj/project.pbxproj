@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD6F15121AFB4ECA003A8909 /* RSFoundationUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD6F15111AFB4ECA003A8909 /* RSFoundationUtils.h */; };
+		FD6F151A1AFB4ECA003A8909 /* libRSFoundationUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6F150E1AFB4ECA003A8909 /* libRSFoundationUtils.a */; };
+		FDC7A4F01AFB9AB1004D191F /* NSDictionary+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4EF1AFB9AB1004D191F /* NSDictionary+FoundationUtils.m */; };
+		FDC7A4F31AFB9B1C004D191F /* NSFileManager+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4F21AFB9B1C004D191F /* NSFileManager+FoundationUtils.m */; };
+		FDC7A4F61AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4F51AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.m */; };
+		FDC7A4F91AFB9C1F004D191F /* NSMutableArray+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4F81AFB9C1F004D191F /* NSMutableArray+FoundationUtils.m */; };
+		FDC7A4FC1AFB9C7A004D191F /* NSObject+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4FB1AFB9C7A004D191F /* NSObject+FoundationUtils.m */; };
+		FDC7A4FF1AFB9D0B004D191F /* RSWeakObjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4FE1AFB9D0B004D191F /* RSWeakObjectContainer.m */; };
+		FDC7A5021AFB9DB7004D191F /* NSString+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A5011AFB9DB7004D191F /* NSString+FoundationUtils.m */; };
+		FDC7A5051AFB9E2E004D191F /* NSURL+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A5041AFB9E2E004D191F /* NSURL+FoundationUtils.m */; };
+		FDC7A5081AFB9E6F004D191F /* RSDebouncer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A5071AFB9E6F004D191F /* RSDebouncer.m */; };
+		FDC7A50C1AFB9FA1004D191F /* RSRestorer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A50B1AFB9FA1004D191F /* RSRestorer.m */; };
+		FDC7A50E1AFBA052004D191F /* RSFoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A50D1AFBA052004D191F /* RSFoundationUtils.m */; };
+		FDD125DA1AFB5EE4001EA14B /* NSArray+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD125D91AFB5EE4001EA14B /* NSArray+FoundationUtils.m */; };
+		FDD125DD1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD125DC1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.m */; };
+		FDD125E11AFB7E4D001EA14B /* NSData+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD125E01AFB7E4D001EA14B /* NSData+FoundationUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD6F151B1AFB4ECA003A8909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD6F15061AFB4ECA003A8909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD6F150D1AFB4ECA003A8909;
+			remoteInfo = RSFoundationUtils;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD6F150C1AFB4ECA003A8909 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				FD6F15121AFB4ECA003A8909 /* RSFoundationUtils.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD6F150E1AFB4ECA003A8909 /* libRSFoundationUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSFoundationUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6F15111AFB4ECA003A8909 /* RSFoundationUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSFoundationUtils.h; sourceTree = "<group>"; };
+		FD6F15191AFB4ECA003A8909 /* RSFoundationUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSFoundationUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6F151F1AFB4ECA003A8909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD6F15281AFB4F09003A8909 /* RSSwizzlingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSwizzlingMacros.h; sourceTree = "<group>"; };
+		FDC7A4EE1AFB9AB1004D191F /* NSDictionary+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDC7A4EF1AFB9AB1004D191F /* NSDictionary+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDC7A4F11AFB9B1C004D191F /* NSFileManager+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDC7A4F21AFB9B1C004D191F /* NSFileManager+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDC7A4F41AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSONSerialization+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDC7A4F51AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSONSerialization+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDC7A4F71AFB9C1F004D191F /* NSMutableArray+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDC7A4F81AFB9C1F004D191F /* NSMutableArray+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDC7A4FA1AFB9C7A004D191F /* NSObject+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDC7A4FB1AFB9C7A004D191F /* NSObject+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDC7A4FD1AFB9D0B004D191F /* RSWeakObjectContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWeakObjectContainer.h; sourceTree = "<group>"; };
+		FDC7A4FE1AFB9D0B004D191F /* RSWeakObjectContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWeakObjectContainer.m; sourceTree = "<group>"; };
+		FDC7A5001AFB9DB7004D191F /* NSString+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDC7A5011AFB9DB7004D191F /* NSString+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDC7A5031AFB9E2E004D191F /* NSURL+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDC7A5041AFB9E2E004D191F /* NSURL+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDC7A5061AFB9E6F004D191F /* RSDebouncer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDebouncer.h; sourceTree = "<group>"; };
+		FDC7A5071AFB9E6F004D191F /* RSDebouncer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDebouncer.m; sourceTree = "<group>"; };
+		FDC7A5091AFB9F5E004D191F /* RSGCDUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSGCDUtils.h; sourceTree = "<group>"; };
+		FDC7A50A1AFB9FA1004D191F /* RSRestorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSRestorer.h; sourceTree = "<group>"; };
+		FDC7A50B1AFB9FA1004D191F /* RSRestorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSRestorer.m; sourceTree = "<group>"; };
+		FDC7A50D1AFBA052004D191F /* RSFoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSFoundationUtils.m; sourceTree = "<group>"; };
+		FDD125D81AFB5EE4001EA14B /* NSArray+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDD125D91AFB5EE4001EA14B /* NSArray+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDD125DB1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDD125DC1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDD125DF1AFB7E4D001EA14B /* NSData+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+FoundationUtils.h"; sourceTree = "<group>"; };
+		FDD125E01AFB7E4D001EA14B /* NSData+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+FoundationUtils.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD6F150B1AFB4ECA003A8909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD6F15161AFB4ECA003A8909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD6F151A1AFB4ECA003A8909 /* libRSFoundationUtils.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD6F15051AFB4ECA003A8909 = {
+			isa = PBXGroup;
+			children = (
+				FD6F15101AFB4ECA003A8909 /* RSFoundationUtils */,
+				FD6F151D1AFB4ECA003A8909 /* RSFoundationUtilsTests */,
+				FD6F150F1AFB4ECA003A8909 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD6F150F1AFB4ECA003A8909 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F150E1AFB4ECA003A8909 /* libRSFoundationUtils.a */,
+				FD6F15191AFB4ECA003A8909 /* RSFoundationUtilsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD6F15101AFB4ECA003A8909 /* RSFoundationUtils */ = {
+			isa = PBXGroup;
+			children = (
+				FDD125DE1AFB7DE8001EA14B /* Additions */,
+				FDC7A5061AFB9E6F004D191F /* RSDebouncer.h */,
+				FDC7A5071AFB9E6F004D191F /* RSDebouncer.m */,
+				FD6F15111AFB4ECA003A8909 /* RSFoundationUtils.h */,
+				FDC7A50D1AFBA052004D191F /* RSFoundationUtils.m */,
+				FDC7A5091AFB9F5E004D191F /* RSGCDUtils.h */,
+				FDC7A50A1AFB9FA1004D191F /* RSRestorer.h */,
+				FDC7A50B1AFB9FA1004D191F /* RSRestorer.m */,
+				FD6F15281AFB4F09003A8909 /* RSSwizzlingMacros.h */,
+				FDC7A4FD1AFB9D0B004D191F /* RSWeakObjectContainer.h */,
+				FDC7A4FE1AFB9D0B004D191F /* RSWeakObjectContainer.m */,
+			);
+			path = RSFoundationUtils;
+			sourceTree = "<group>";
+		};
+		FD6F151D1AFB4ECA003A8909 /* RSFoundationUtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F151E1AFB4ECA003A8909 /* Supporting Files */,
+			);
+			path = RSFoundationUtilsTests;
+			sourceTree = "<group>";
+		};
+		FD6F151E1AFB4ECA003A8909 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD6F151F1AFB4ECA003A8909 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDD125DE1AFB7DE8001EA14B /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				FDD125D81AFB5EE4001EA14B /* NSArray+FoundationUtils.h */,
+				FDD125D91AFB5EE4001EA14B /* NSArray+FoundationUtils.m */,
+				FDD125DB1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.h */,
+				FDD125DC1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.m */,
+				FDD125DF1AFB7E4D001EA14B /* NSData+FoundationUtils.h */,
+				FDD125E01AFB7E4D001EA14B /* NSData+FoundationUtils.m */,
+				FDC7A4EE1AFB9AB1004D191F /* NSDictionary+FoundationUtils.h */,
+				FDC7A4EF1AFB9AB1004D191F /* NSDictionary+FoundationUtils.m */,
+				FDC7A4F11AFB9B1C004D191F /* NSFileManager+FoundationUtils.h */,
+				FDC7A4F21AFB9B1C004D191F /* NSFileManager+FoundationUtils.m */,
+				FDC7A4F41AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.h */,
+				FDC7A4F51AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.m */,
+				FDC7A4F71AFB9C1F004D191F /* NSMutableArray+FoundationUtils.h */,
+				FDC7A4F81AFB9C1F004D191F /* NSMutableArray+FoundationUtils.m */,
+				FDC7A4FA1AFB9C7A004D191F /* NSObject+FoundationUtils.h */,
+				FDC7A4FB1AFB9C7A004D191F /* NSObject+FoundationUtils.m */,
+				FDC7A5001AFB9DB7004D191F /* NSString+FoundationUtils.h */,
+				FDC7A5011AFB9DB7004D191F /* NSString+FoundationUtils.m */,
+				FDC7A5031AFB9E2E004D191F /* NSURL+FoundationUtils.h */,
+				FDC7A5041AFB9E2E004D191F /* NSURL+FoundationUtils.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD6F150D1AFB4ECA003A8909 /* RSFoundationUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD6F15221AFB4ECA003A8909 /* Build configuration list for PBXNativeTarget "RSFoundationUtils" */;
+			buildPhases = (
+				FD6F150A1AFB4ECA003A8909 /* Sources */,
+				FD6F150B1AFB4ECA003A8909 /* Frameworks */,
+				FD6F150C1AFB4ECA003A8909 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSFoundationUtils;
+			productName = RSFoundationUtils;
+			productReference = FD6F150E1AFB4ECA003A8909 /* libRSFoundationUtils.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FD6F15181AFB4ECA003A8909 /* RSFoundationUtilsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD6F15251AFB4ECA003A8909 /* Build configuration list for PBXNativeTarget "RSFoundationUtilsTests" */;
+			buildPhases = (
+				FD6F15151AFB4ECA003A8909 /* Sources */,
+				FD6F15161AFB4ECA003A8909 /* Frameworks */,
+				FD6F15171AFB4ECA003A8909 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD6F151C1AFB4ECA003A8909 /* PBXTargetDependency */,
+			);
+			name = RSFoundationUtilsTests;
+			productName = RSFoundationUtilsTests;
+			productReference = FD6F15191AFB4ECA003A8909 /* RSFoundationUtilsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD6F15061AFB4ECA003A8909 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RS;
+				LastUpgradeCheck = 0630;
+				TargetAttributes = {
+					FD6F150D1AFB4ECA003A8909 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					FD6F15181AFB4ECA003A8909 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FD6F15091AFB4ECA003A8909 /* Build configuration list for PBXProject "RSFoundationUtils" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FD6F15051AFB4ECA003A8909;
+			productRefGroup = FD6F150F1AFB4ECA003A8909 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD6F150D1AFB4ECA003A8909 /* RSFoundationUtils */,
+				FD6F15181AFB4ECA003A8909 /* RSFoundationUtilsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD6F15171AFB4ECA003A8909 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD6F150A1AFB4ECA003A8909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7A5081AFB9E6F004D191F /* RSDebouncer.m in Sources */,
+				FDC7A4FC1AFB9C7A004D191F /* NSObject+FoundationUtils.m in Sources */,
+				FDC7A50C1AFB9FA1004D191F /* RSRestorer.m in Sources */,
+				FDC7A4F91AFB9C1F004D191F /* NSMutableArray+FoundationUtils.m in Sources */,
+				FDC7A5051AFB9E2E004D191F /* NSURL+FoundationUtils.m in Sources */,
+				FDC7A50E1AFBA052004D191F /* RSFoundationUtils.m in Sources */,
+				FDC7A4F31AFB9B1C004D191F /* NSFileManager+FoundationUtils.m in Sources */,
+				FDD125DD1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.m in Sources */,
+				FDC7A4F61AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.m in Sources */,
+				FDD125E11AFB7E4D001EA14B /* NSData+FoundationUtils.m in Sources */,
+				FDD125DA1AFB5EE4001EA14B /* NSArray+FoundationUtils.m in Sources */,
+				FDC7A4FF1AFB9D0B004D191F /* RSWeakObjectContainer.m in Sources */,
+				FDC7A5021AFB9DB7004D191F /* NSString+FoundationUtils.m in Sources */,
+				FDC7A4F01AFB9AB1004D191F /* NSDictionary+FoundationUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD6F15151AFB4ECA003A8909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD6F151C1AFB4ECA003A8909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD6F150D1AFB4ECA003A8909 /* RSFoundationUtils */;
+			targetProxy = FD6F151B1AFB4ECA003A8909 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FD6F15201AFB4ECA003A8909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FD6F15211AFB4ECA003A8909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD6F15231AFB4ECA003A8909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FD6F15241AFB4ECA003A8909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FD6F15261AFB4ECA003A8909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RSFoundationUtilsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FD6F15271AFB4ECA003A8909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RSFoundationUtilsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD6F15091AFB4ECA003A8909 /* Build configuration list for PBXProject "RSFoundationUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD6F15201AFB4ECA003A8909 /* Debug */,
+				FD6F15211AFB4ECA003A8909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD6F15221AFB4ECA003A8909 /* Build configuration list for PBXNativeTarget "RSFoundationUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD6F15231AFB4ECA003A8909 /* Debug */,
+				FD6F15241AFB4ECA003A8909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD6F15251AFB4ECA003A8909 /* Build configuration list for PBXNativeTarget "RSFoundationUtilsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD6F15261AFB4ECA003A8909 /* Debug */,
+				FD6F15271AFB4ECA003A8909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD6F15061AFB4ECA003A8909 /* Project object */;
+}
