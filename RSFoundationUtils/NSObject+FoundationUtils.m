@@ -113,7 +113,32 @@
         [result setValue:[self valueForKey:key] forKey:key];
     }
 
+    va_end(args);
+
     return result;
+}
+
+- (void)rs_changeValuesUsingBlock:(void (^)())block forKeyPaths:(NSString *)keyPath, ... NS_REQUIRES_NIL_TERMINATION {
+    va_list keyPathAp;
+    va_start(keyPathAp, keyPath);
+
+    NSMutableArray *keyPaths = [NSMutableArray new];
+
+    for (NSString * kp = keyPath; kp != nil; kp = va_arg(keyPathAp, NSString *)) {
+        [keyPaths addObject:kp];
+    }
+
+    va_end(keyPathAp);
+
+    [keyPaths enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [self willChangeValueForKey:obj];
+    }];
+
+    block();
+
+    [keyPaths enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [self didChangeValueForKey:obj];
+    }];
 }
 
 @end
