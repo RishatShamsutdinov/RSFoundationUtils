@@ -32,7 +32,7 @@ void rs_dispatch_specific_sync(dispatch_queue_t queue, dispatch_block_t block) {
     }
 }
 
-void rs_assert_specific_queue(dispatch_queue_t queue) {
+void rs_dispatch_assert_specific_queue(dispatch_queue_t queue) {
     if (dispatch_get_specific(kQSpecificContextKey) != dispatch_queue_get_specific(queue, kQSpecificContextKey)) {
         const char * label = dispatch_queue_get_label(queue);
 

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RSFoundationUtils"
-  s.version      = "0.1.3"
+  s.version      = "0.1.3.1"
   s.summary      = "Utils for Foundation."
 
   s.description  = <<-DESC
