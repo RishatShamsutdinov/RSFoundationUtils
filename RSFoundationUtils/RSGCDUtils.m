@@ -31,3 +31,15 @@ void rs_dispatch_specific_sync(dispatch_queue_t queue, dispatch_block_t block) {
         dispatch_sync(queue, block);
     }
 }
+
+void rs_assert_specific_queue(dispatch_queue_t queue) {
+    if (dispatch_get_specific(kQSpecificContextKey) != dispatch_queue_get_specific(queue, kQSpecificContextKey)) {
+        const char * label = dispatch_queue_get_label(queue);
+
+        NSString *queueName = label ? [NSString stringWithCString:label encoding:NSASCIIStringEncoding] : @"";
+        NSString *reason = [NSString stringWithFormat:@"Code must be executed in specific queue (\"%@\")", queueName];
+
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                       reason:reason userInfo:nil];
+    }
+}
