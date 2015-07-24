@@ -23,6 +23,8 @@
 		FDD125DA1AFB5EE4001EA14B /* NSArray+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD125D91AFB5EE4001EA14B /* NSArray+FoundationUtils.m */; };
 		FDD125DD1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD125DC1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.m */; };
 		FDD125E11AFB7E4D001EA14B /* NSData+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD125E01AFB7E4D001EA14B /* NSData+FoundationUtils.m */; };
+		FDE3886A1B621BE300AF0FD4 /* RSGCDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE388691B621BE300AF0FD4 /* RSGCDUtils.m */; };
+		FDE3886C1B62209D00AF0FD4 /* RSDispatchSpecificTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE3886B1B62209D00AF0FD4 /* RSDispatchSpecificTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		FDD125DC1AFB7C1E001EA14B /* NSAttributedString+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+FoundationUtils.m"; sourceTree = "<group>"; };
 		FDD125DF1AFB7E4D001EA14B /* NSData+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+FoundationUtils.h"; sourceTree = "<group>"; };
 		FDD125E01AFB7E4D001EA14B /* NSData+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+FoundationUtils.m"; sourceTree = "<group>"; };
+		FDE388691B621BE300AF0FD4 /* RSGCDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSGCDUtils.m; sourceTree = "<group>"; };
+		FDE3886B1B62209D00AF0FD4 /* RSDispatchSpecificTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDispatchSpecificTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 				FD6F15111AFB4ECA003A8909 /* RSFoundationUtils.h */,
 				FDC7A50D1AFBA052004D191F /* RSFoundationUtils.m */,
 				FDC7A5091AFB9F5E004D191F /* RSGCDUtils.h */,
+				FDE388691B621BE300AF0FD4 /* RSGCDUtils.m */,
 				FDC7A50A1AFB9FA1004D191F /* RSRestorer.h */,
 				FDC7A50B1AFB9FA1004D191F /* RSRestorer.m */,
 				FD6F15281AFB4F09003A8909 /* RSSwizzlingMacros.h */,
@@ -142,6 +147,7 @@
 		FD6F151D1AFB4ECA003A8909 /* RSFoundationUtilsTests */ = {
 			isa = PBXGroup;
 			children = (
+				FDE3886B1B62209D00AF0FD4 /* RSDispatchSpecificTests.m */,
 				FD6F151E1AFB4ECA003A8909 /* Supporting Files */,
 			);
 			path = RSFoundationUtilsTests;
@@ -272,6 +278,7 @@
 			files = (
 				FDC7A5081AFB9E6F004D191F /* RSDebouncer.m in Sources */,
 				FDC7A4FC1AFB9C7A004D191F /* NSObject+FoundationUtils.m in Sources */,
+				FDE3886A1B621BE300AF0FD4 /* RSGCDUtils.m in Sources */,
 				FDC7A50C1AFB9FA1004D191F /* RSRestorer.m in Sources */,
 				FDC7A4F91AFB9C1F004D191F /* NSMutableArray+FoundationUtils.m in Sources */,
 				FDC7A5051AFB9E2E004D191F /* NSURL+FoundationUtils.m in Sources */,
@@ -291,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE3886C1B62209D00AF0FD4 /* RSDispatchSpecificTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
