@@ -32,3 +32,7 @@
 id withStrongSelf(id __weak weakSelf, id (^block)(id strongSelf));
 
 void voidWithStrongSelf(id __weak weakSelf, void (^block)(id strongSelf));
+
+id withStrongObj(id __weak weakObj, id (^block)(id strongObj));
+
+void voidWithStrongObj(id __weak weakObj, void (^block)(id strongObj));

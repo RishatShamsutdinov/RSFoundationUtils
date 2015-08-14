@@ -19,19 +19,27 @@
 #import "RSFoundationUtils.h"
 
 id withStrongSelf(id __weak weakSelf, id (^block)(id strongSelf)) {
-    typeof(weakSelf) __strong strongSelf = weakSelf;
+    return withStrongObj(weakSelf, block);
+}
 
-    if (strongSelf) {
-        return block(strongSelf);
+void voidWithStrongSelf(id __weak weakSelf, void (^block)(id strongSelf)) {
+    voidWithStrongObj(weakSelf, block);
+}
+
+id withStrongObj(id __weak weakObj, id (^block)(id strongObj)) {
+    typeof(weakObj) __strong strongObj = weakObj;
+
+    if (strongObj) {
+        return block(strongObj);
     }
 
     return nil;
 }
 
-void voidWithStrongSelf(id __weak weakSelf, void (^block)(id strongSelf)) {
-    typeof(weakSelf) __strong strongSelf = weakSelf;
+void voidWithStrongObj(id __weak weakObj, void (^block)(id strongObj)) {
+    typeof(weakObj) __strong strongObj = weakObj;
 
-    if (strongSelf) {
-        block(strongSelf);
+    if (strongObj) {
+        block(strongObj);
     }
 }
