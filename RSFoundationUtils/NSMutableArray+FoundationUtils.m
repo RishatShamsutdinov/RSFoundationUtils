@@ -27,7 +27,7 @@
 }
 
 - (void)rs_insertObjects:(NSArray *)objects atIndex:(NSInteger)index {
-    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, objects.count)];
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(index, objects.count)];
 
     [self insertObjects:objects atIndexes:indexSet];
 }
