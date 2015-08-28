@@ -20,12 +20,14 @@
 
 @implementation NSAttributedString (FoundationUtils)
 
-- (instancetype)rs_initWithStringOrNil:(NSString *)aStringOrNil attributes:(NSDictionary *)attributes {
-    if (!aStringOrNil) {
-        return nil;
+- (instancetype)rs_initWithStringOrNil:(NSString *)aStringOrNil attributes:(NSDictionary *)attributes NS_REPLACES_RECEIVER {
+    if (aStringOrNil) {
+        self = [self initWithString:aStringOrNil attributes:attributes];
+    } else {
+        self = nil;
     }
 
-    return [self initWithString:aStringOrNil attributes:attributes];
+    return self;
 }
 
 - (instancetype)rs_attributedStringByAppendingAttributes:(NSDictionary *)attributes {

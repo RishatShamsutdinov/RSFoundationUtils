@@ -20,7 +20,7 @@
 
 @interface NSAttributedString (FoundationUtils)
 
-- (instancetype)rs_initWithStringOrNil:(NSString *)aStringOrNil attributes:(NSDictionary *)attributes;
+- (instancetype)rs_initWithStringOrNil:(NSString *)aStringOrNil attributes:(NSDictionary *)attributes NS_REPLACES_RECEIVER;
 
 - (instancetype)rs_attributedStringByAppendingAttributes:(NSDictionary *)attributes;
 
