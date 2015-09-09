@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RSFoundationUtils"
-  s.version      = "0.3.1"
+  s.version      = "0.3.2"
   s.summary      = "Utils for Foundation."
 
   s.description  = <<-DESC
@@ -124,6 +124,7 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
+  s.compiler_flags = '-Wimplicit-retain-self'
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
