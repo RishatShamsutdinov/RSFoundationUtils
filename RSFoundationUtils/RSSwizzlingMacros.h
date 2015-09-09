@@ -28,7 +28,7 @@
 #define RS_SWIZZLED_METHOD_WO_ARGS(name) RS_SWIZZLED_IMP(name)(id self, SEL _cmd)
 
 #define RS_SWIZZLE(clazz, selectorName, name) \
-    Method name ## Method = class_getInstanceMethod(clazz, @selector(selectorName)); \
+    Method name ## Method = class_getInstanceMethod((clazz), @selector((selectorName))); \
     \
     RS_ORIGINAL_IMP(name) = method_setImplementation(name ## Method, (IMP)RS_SWIZZLED_IMP(name))
 

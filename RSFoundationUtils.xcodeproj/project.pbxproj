@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD667F2D1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FD667F2C1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.m */; };
 		FD6F15121AFB4ECA003A8909 /* RSFoundationUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD6F15111AFB4ECA003A8909 /* RSFoundationUtils.h */; };
 		FD6F151A1AFB4ECA003A8909 /* libRSFoundationUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6F150E1AFB4ECA003A8909 /* libRSFoundationUtils.a */; };
+		FD9C8EEA1BA0050500825DCD /* RSWeakKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9C8EE91BA0050500825DCD /* RSWeakKVOProxy.m */; };
 		FDC7A4F01AFB9AB1004D191F /* NSDictionary+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4EF1AFB9AB1004D191F /* NSDictionary+FoundationUtils.m */; };
 		FDC7A4F31AFB9B1C004D191F /* NSFileManager+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4F21AFB9B1C004D191F /* NSFileManager+FoundationUtils.m */; };
 		FDC7A4F61AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC7A4F51AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.m */; };
@@ -51,11 +53,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD667F2B1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+FoundationUtils.h"; sourceTree = "<group>"; };
+		FD667F2C1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+FoundationUtils.m"; sourceTree = "<group>"; };
 		FD6F150E1AFB4ECA003A8909 /* libRSFoundationUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSFoundationUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6F15111AFB4ECA003A8909 /* RSFoundationUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSFoundationUtils.h; sourceTree = "<group>"; };
 		FD6F15191AFB4ECA003A8909 /* RSFoundationUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSFoundationUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6F151F1AFB4ECA003A8909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD6F15281AFB4F09003A8909 /* RSSwizzlingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSwizzlingMacros.h; sourceTree = "<group>"; };
+		FD9C8EE81BA0050500825DCD /* RSWeakKVOProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSWeakKVOProxy.h; sourceTree = "<group>"; };
+		FD9C8EE91BA0050500825DCD /* RSWeakKVOProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSWeakKVOProxy.m; sourceTree = "<group>"; };
 		FDC7A4EE1AFB9AB1004D191F /* NSDictionary+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FoundationUtils.h"; sourceTree = "<group>"; };
 		FDC7A4EF1AFB9AB1004D191F /* NSDictionary+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FoundationUtils.m"; sourceTree = "<group>"; };
 		FDC7A4F11AFB9B1C004D191F /* NSFileManager+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+FoundationUtils.h"; sourceTree = "<group>"; };
@@ -135,6 +141,8 @@
 				FDC7A50D1AFBA052004D191F /* RSFoundationUtils.m */,
 				FDC7A5091AFB9F5E004D191F /* RSGCDUtils.h */,
 				FDE388691B621BE300AF0FD4 /* RSGCDUtils.m */,
+				FD9C8EE81BA0050500825DCD /* RSWeakKVOProxy.h */,
+				FD9C8EE91BA0050500825DCD /* RSWeakKVOProxy.m */,
 				FDC7A50A1AFB9FA1004D191F /* RSRestorer.h */,
 				FDC7A50B1AFB9FA1004D191F /* RSRestorer.m */,
 				FD6F15281AFB4F09003A8909 /* RSSwizzlingMacros.h */,
@@ -178,6 +186,8 @@
 				FDC7A4F51AFB9BBA004D191F /* NSJSONSerialization+FoundationUtils.m */,
 				FDC7A4F71AFB9C1F004D191F /* NSMutableArray+FoundationUtils.h */,
 				FDC7A4F81AFB9C1F004D191F /* NSMutableArray+FoundationUtils.m */,
+				FD667F2B1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.h */,
+				FD667F2C1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.m */,
 				FDC7A4FA1AFB9C7A004D191F /* NSObject+FoundationUtils.h */,
 				FDC7A4FB1AFB9C7A004D191F /* NSObject+FoundationUtils.m */,
 				FDC7A5001AFB9DB7004D191F /* NSString+FoundationUtils.h */,
@@ -290,7 +300,9 @@
 				FDD125DA1AFB5EE4001EA14B /* NSArray+FoundationUtils.m in Sources */,
 				FDC7A4FF1AFB9D0B004D191F /* RSWeakObjectContainer.m in Sources */,
 				FDC7A5021AFB9DB7004D191F /* NSString+FoundationUtils.m in Sources */,
+				FD9C8EEA1BA0050500825DCD /* RSWeakKVOProxy.m in Sources */,
 				FDC7A4F01AFB9AB1004D191F /* NSDictionary+FoundationUtils.m in Sources */,
+				FD667F2D1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

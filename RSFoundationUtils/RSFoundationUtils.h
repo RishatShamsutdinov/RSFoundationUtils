@@ -27,7 +27,9 @@
 #import "NSMutableArray+FoundationUtils.h"
 #import "NSObject+FoundationUtils.h"
 #import "NSString+FoundationUtils.h"
+#import "NSNotificationCenter+FoundationUtils.h"
 #import "RSGCDUtils.h"
+#import "RSWeakKVOProxy.h"
 
 id withStrongSelf(id __weak weakSelf, id (^block)(id strongSelf));
 
