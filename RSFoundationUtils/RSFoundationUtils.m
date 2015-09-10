@@ -18,11 +18,11 @@
 
 #import "RSFoundationUtils.h"
 
-id withStrongSelf(id __weak weakSelf, id (^block)(__typeof__(weakSelf) strongSelf)) {
+id withStrongSelf(id __weak weakSelf, id (^block)(id strongSelf)) {
     return withStrongObj(weakSelf, block);
 }
 
-void voidWithStrongSelf(id __weak weakSelf, void (^block)(__typeof__(weakSelf) strongSelf)) {
+void voidWithStrongSelf(id __weak weakSelf, void (^block)(id strongSelf)) {
     voidWithStrongObj(weakSelf, block);
 }
 

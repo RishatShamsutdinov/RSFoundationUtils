@@ -31,9 +31,9 @@
 #import "RSGCDUtils.h"
 #import "RSWeakKVOProxy.h"
 
-id withStrongSelf(id __weak weakSelf, id (^block)(__typeof__(weakSelf) self));
+id withStrongSelf(id __weak weakSelf, id (^block)(id self));
 
-void voidWithStrongSelf(id __weak weakSelf, void (^block)(__typeof__(weakSelf) self));
+void voidWithStrongSelf(id __weak weakSelf, void (^block)(id self));
 
 id withStrongObj(id __weak weakObj, id (^block)(id strongObj));
 
