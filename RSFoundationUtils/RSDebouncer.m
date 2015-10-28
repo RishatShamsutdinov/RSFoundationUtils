@@ -53,7 +53,7 @@ static NSTimeInterval const kDefaultDelay = 0.25;
 }
 
 - (instancetype)initWithDelay:(NSTimeInterval)aDelay queue:(dispatch_queue_t)queue {
-    if (self = [self init]) {
+    if (self = [super init]) {
         _delay = aDelay;
         _queue = queue;
     }
