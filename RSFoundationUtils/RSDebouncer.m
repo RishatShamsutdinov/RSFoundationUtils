@@ -44,6 +44,10 @@ static NSTimeInterval const kDefaultDelay = 0.25;
     return [[self alloc] initWithDelay:delay queue:queue];
 }
 
+- (instancetype)init {
+    return [self initWithDelay:kDefaultDelay];
+}
+
 - (instancetype)initWithDelay:(NSTimeInterval)delay {
     return [self initWithDelay:delay queue:NULL];
 }
