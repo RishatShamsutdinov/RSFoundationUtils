@@ -23,7 +23,9 @@ typedef void (^RSDebouncerBlock)();
 @interface RSDebouncer : NSObject
 
 + (instancetype)debouncerWithDelay:(NSTimeInterval)delay;
++ (instancetype)debouncerWithDelay:(NSTimeInterval)delay queue:(dispatch_queue_t)queue;
 - (instancetype)initWithDelay:(NSTimeInterval)delay;
+- (instancetype)initWithDelay:(NSTimeInterval)delay queue:(dispatch_queue_t)queue;
 
 - (void)debounceWithBlock:(RSDebouncerBlock)block;
 

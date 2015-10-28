@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RSFoundationUtils"
-  s.version      = "0.3.3"
+  s.version      = "0.3.4"
   s.summary      = "Utils for Foundation."
 
   s.description  = <<-DESC
@@ -116,6 +116,7 @@ Pod::Spec.new do |s|
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
+  s.dependency 'GCDTimer', '~> 1.1'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7F72B2EC101C43B7DD5C33D /* libPods-RSFoundationUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9486F07EED62D06401E08CB3 /* libPods-RSFoundationUtils.a */; };
 		FD667F2D1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FD667F2C1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.m */; };
 		FD6F15121AFB4ECA003A8909 /* RSFoundationUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FD6F15111AFB4ECA003A8909 /* RSFoundationUtils.h */; };
 		FD6F151A1AFB4ECA003A8909 /* libRSFoundationUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD6F150E1AFB4ECA003A8909 /* libRSFoundationUtils.a */; };
@@ -53,6 +54,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		903B1ECFFF62706FCEFD2D87 /* Pods-RSFoundationUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFoundationUtils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSFoundationUtils/Pods-RSFoundationUtils.debug.xcconfig"; sourceTree = "<group>"; };
+		9486F07EED62D06401E08CB3 /* libPods-RSFoundationUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFoundationUtils.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34F713AFE499F7A771A7CDD /* Pods-RSFoundationUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFoundationUtils.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSFoundationUtils/Pods-RSFoundationUtils.release.xcconfig"; sourceTree = "<group>"; };
 		FD667F2B1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+FoundationUtils.h"; sourceTree = "<group>"; };
 		FD667F2C1BA008F0009B6157 /* NSNotificationCenter+FoundationUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+FoundationUtils.m"; sourceTree = "<group>"; };
 		FD6F150E1AFB4ECA003A8909 /* libRSFoundationUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSFoundationUtils.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F72B2EC101C43B7DD5C33D /* libPods-RSFoundationUtils.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,12 +118,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BCCA7A6CCEE8308AADB118F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				903B1ECFFF62706FCEFD2D87 /* Pods-RSFoundationUtils.debug.xcconfig */,
+				B34F713AFE499F7A771A7CDD /* Pods-RSFoundationUtils.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0391FABA78C18D211BB4E34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9486F07EED62D06401E08CB3 /* libPods-RSFoundationUtils.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD6F15051AFB4ECA003A8909 = {
 			isa = PBXGroup;
 			children = (
 				FD6F15101AFB4ECA003A8909 /* RSFoundationUtils */,
 				FD6F151D1AFB4ECA003A8909 /* RSFoundationUtilsTests */,
 				FD6F150F1AFB4ECA003A8909 /* Products */,
+				8BCCA7A6CCEE8308AADB118F /* Pods */,
+				D0391FABA78C18D211BB4E34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FD6F15221AFB4ECA003A8909 /* Build configuration list for PBXNativeTarget "RSFoundationUtils" */;
 			buildPhases = (
+				EFCECD1493D773D5B5880AEA /* Check Pods Manifest.lock */,
 				FD6F150A1AFB4ECA003A8909 /* Sources */,
 				FD6F150B1AFB4ECA003A8909 /* Frameworks */,
 				FD6F150C1AFB4ECA003A8909 /* CopyFiles */,
+				AE739FC01E52E8A397B6B1CF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,6 +306,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE739FC01E52E8A397B6B1CF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSFoundationUtils/Pods-RSFoundationUtils-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFCECD1493D773D5B5880AEA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FD6F150A1AFB4ECA003A8909 /* Sources */ = {
@@ -405,8 +464,9 @@
 		};
 		FD6F15231AFB4ECA003A8909 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 903B1ECFFF62706FCEFD2D87 /* Pods-RSFoundationUtils.debug.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -414,8 +474,9 @@
 		};
 		FD6F15241AFB4ECA003A8909 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B34F713AFE499F7A771A7CDD /* Pods-RSFoundationUtils.release.xcconfig */;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -435,6 +496,7 @@
 				);
 				INFOPLIST_FILE = RSFoundationUtilsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -449,6 +511,7 @@
 				);
 				INFOPLIST_FILE = RSFoundationUtilsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

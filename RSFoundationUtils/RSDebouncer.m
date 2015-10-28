@@ -18,11 +18,18 @@
 
 #import "RSDebouncer.h"
 
+#import <GCDTimer/GCDTimer.h>
+
+#import "RSFoundationUtils.h"
+
 static NSTimeInterval const kDefaultDelay = 0.25;
 
 @interface RSDebouncer () {
-    NSTimer *_timer;
     NSTimeInterval _delay;
+
+    GCDTimer *_timer;
+
+    dispatch_queue_t _queue;
 }
 
 @end
@@ -30,12 +37,21 @@ static NSTimeInterval const kDefaultDelay = 0.25;
 @implementation RSDebouncer
 
 + (instancetype)debouncerWithDelay:(NSTimeInterval)delay {
-    return [[self alloc] initWithDelay:delay];
+    return [self debouncerWithDelay:delay queue:NULL];
 }
 
-- (instancetype)initWithDelay:(NSTimeInterval)aDelay {
++ (instancetype)debouncerWithDelay:(NSTimeInterval)delay queue:(dispatch_queue_t)queue {
+    return [[self alloc] initWithDelay:delay queue:queue];
+}
+
+- (instancetype)initWithDelay:(NSTimeInterval)delay {
+    return [self initWithDelay:delay queue:NULL];
+}
+
+- (instancetype)initWithDelay:(NSTimeInterval)aDelay queue:(dispatch_queue_t)queue {
     if (self = [self init]) {
         _delay = aDelay;
+        _queue = queue;
     }
 
     return self;
@@ -44,15 +60,27 @@ static NSTimeInterval const kDefaultDelay = 0.25;
 - (void)debounceWithBlock:(RSDebouncerBlock)block {
     [_timer invalidate];
 
-    _timer = [NSTimer scheduledTimerWithTimeInterval:_delay ? _delay : kDefaultDelay target:self
-                                            selector:@selector(performAgrregatorCompletion:)
-                                            userInfo:[block copy] repeats:NO];
-}
+    dispatch_queue_t queue = _queue;
 
-- (void)performAgrregatorCompletion:(NSTimer *)aTimer {
-    RSDebouncerBlock block = aTimer.userInfo;
+    if (queue) {
+        // do nothing
+    }
+    else if ([NSThread isMainThread]) {
+        queue = dispatch_get_main_queue();
+    }
+    else {
+        queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    }
 
-    block();
+    block = [block copy];
+
+    typeof(self) __weak weakSelf = self;
+
+    _timer = [GCDTimer scheduledTimerWithTimeInterval:_delay repeats:NO queue:queue block:^{
+        voidWithStrongSelf(weakSelf, ^(typeof(self) self) {
+            block();
+        });
+    }];
 }
 
 - (void)dealloc {
