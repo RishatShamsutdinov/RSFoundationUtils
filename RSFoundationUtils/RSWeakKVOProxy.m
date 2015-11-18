@@ -41,7 +41,9 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
                         change:(NSDictionary *)change context:(void *)context
 {
-    [_target observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    @autoreleasepool {
+        [_target observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
 }
 
 @end

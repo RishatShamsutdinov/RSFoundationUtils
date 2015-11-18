@@ -121,19 +121,21 @@ static void RS_SWIZZLED_METHOD(removeObserverForName, id observer, NSString *nam
 }
 
 - (void)observeNotification:(NSNotification *)notif {
-    id target = _target;
+    @autoreleasepool {
+        id target = _target;
 
-    if (!target) {
-        return;
-    }
+        if (!target) {
+            return;
+        }
 
-    IMP anImp = [target methodForSelector:_targetSelector];
-    NSMethodSignature *sig = [target methodSignatureForSelector:_targetSelector];
+        IMP anImp = [target methodForSelector:_targetSelector];
+        NSMethodSignature *sig = [target methodSignatureForSelector:_targetSelector];
 
-    if (sig.numberOfArguments > 2) {
-        ((void (*)(id, SEL, NSNotification *)) anImp)(target, _targetSelector, notif);
-    } else {
-        ((void (*)(id, SEL)) anImp)(target, _targetSelector);
+        if (sig.numberOfArguments > 2) {
+            ((void (*)(id, SEL, NSNotification *)) anImp)(target, _targetSelector, notif);
+        } else {
+            ((void (*)(id, SEL)) anImp)(target, _targetSelector);
+        }
     }
 }
 
