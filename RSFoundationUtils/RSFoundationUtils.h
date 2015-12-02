@@ -31,6 +31,10 @@
 #import "RSGCDUtils.h"
 #import "RSWeakKVOProxy.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 id withStrongSelf(id __weak weakSelf, id (^block)(id self));
 
 void voidWithStrongSelf(id __weak weakSelf, void (^block)(id self));
@@ -38,3 +42,7 @@ void voidWithStrongSelf(id __weak weakSelf, void (^block)(id self));
 id withStrongObj(id __weak weakObj, id (^block)(id strongObj));
 
 void voidWithStrongObj(id __weak weakObj, void (^block)(id strongObj));
+
+#ifdef __cplusplus
+}
+#endif

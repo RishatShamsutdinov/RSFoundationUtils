@@ -19,10 +19,18 @@
 #ifndef RSFoundationUtils_RSGCDUtils_h
 #define RSFoundationUtils_RSGCDUtils_h
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 dispatch_queue_t rs_dispatch_specific_queue_create(const char *label, dispatch_queue_attr_t attr);
 
 void rs_dispatch_specific_sync(dispatch_queue_t queue, dispatch_block_t block);
 void rs_dispatch_assert_specific_queue(dispatch_queue_t queue);
+
+#ifdef __cplusplus
+}
+#endif
 
 static inline void rs_dispatch_async_def(dispatch_block_t block) {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block);
