@@ -26,7 +26,7 @@
     [self removeObjectsAtIndexes:indexesToRemove];
 }
 
-- (void)rs_insertObjects:(NSArray *)objects atIndex:(NSInteger)index {
+- (void)rs_insertObjects:(NSArray *)objects atIndex:(NSUInteger)index {
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(index, objects.count)];
 
     [self insertObjects:objects atIndexes:indexSet];

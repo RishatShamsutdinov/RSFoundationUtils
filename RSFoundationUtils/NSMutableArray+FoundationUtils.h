@@ -21,6 +21,6 @@
 @interface NSMutableArray (FoundationUtils)
 
 - (void)rs_removeObjectsPassingTest:(BOOL (^)(id obj, NSUInteger idx, BOOL *stop))predicate;
-- (void)rs_insertObjects:(NSArray *)objects atIndex:(NSInteger)index;
+- (void)rs_insertObjects:(NSArray *)objects atIndex:(NSUInteger)index;
 
 @end
