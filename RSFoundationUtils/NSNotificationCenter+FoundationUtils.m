@@ -18,12 +18,11 @@
     id __weak _target;
     SEL _targetSelector;
     NSString *_notifName;
-    id __unsafe_unretained _notifSender;
 
     NSNotificationCenter * __weak _notifCenter;
 }
 
-- (instancetype)initWithTarget:(id)target selector:(SEL)sel name:(NSString *)name object:(id)object
+- (instancetype)initWithTarget:(id)target selector:(SEL)sel name:(NSString *)name
                    notifCenter:(NSNotificationCenter *)notifCenter;
 
 - (void)observeNotification:(NSNotification *)notif;
@@ -81,11 +80,8 @@ static void RS_SWIZZLED_METHOD(removeObserverForName, id observer, NSString *nam
                                      userInfo:nil];
     }
 
-    RSNotifObserver *notifObserver = [[RSNotifObserver alloc] initWithTarget:observer
-                                                                    selector:selector
-                                                                        name:name
-                                                                      object:object
-                                                                 notifCenter:self];
+    RSNotifObserver *notifObserver = [[RSNotifObserver alloc] initWithTarget:observer selector:selector
+                                                                        name:name notifCenter:self];
 
     @synchronized(self) {
         NSMutableArray *observers = objc_getAssociatedObject(observer, kNotifObserversKey);
@@ -107,14 +103,13 @@ static void RS_SWIZZLED_METHOD(removeObserverForName, id observer, NSString *nam
 @implementation RSNotifObserver
 
 - (instancetype)initWithTarget:(id)target selector:(SEL)sel name:(NSString *)name
-                        object:(id)object notifCenter:(NSNotificationCenter *)notifCenter
+                   notifCenter:(NSNotificationCenter *)notifCenter
 {
     if (self = [super init]) {
-        _target = target;
+        _target         = target;
         _targetSelector = sel;
-        _notifName = [name copy];
-        _notifSender = object;
-        _notifCenter = notifCenter;
+        _notifName      = [name copy];
+        _notifCenter    = notifCenter;
     }
 
     return self;
