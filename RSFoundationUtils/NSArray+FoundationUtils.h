@@ -18,19 +18,19 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (FoundationUtils)
+@interface NSArray<__covariant ObjectType> (FoundationUtils)
 
-- (NSArray *)rs_mapUsingBlock:(id (^)(id obj, NSUInteger idx))block;
+- (NSArray *)rs_mapUsingBlock:(id (^)(ObjectType obj, NSUInteger idx))block;
 
-- (NSArray *)rs_filteredArrayUsingBlock:(BOOL (^)(id obj))block;
+- (NSArray<ObjectType> *)rs_filteredArrayUsingBlock:(BOOL (^)(ObjectType obj))block;
 
-- (id)rs_objectPassingTest:(BOOL (^)(id obj))predicate;
+- (ObjectType)rs_objectPassingTest:(BOOL (^)(ObjectType obj))predicate;
 
-- (id)rs_objectWithClass:(Class)aClass;
+- (ObjectType)rs_objectWithClass:(Class)aClass;
 
-- (void)rs_enumerateObjectsWithClass:(Class)aClass usingBlock:(void (^)(id obj, NSUInteger idx, BOOL *stop))block;
+- (void)rs_enumerateObjectsWithClass:(Class)aClass usingBlock:(void (^)(ObjectType obj, NSUInteger idx, BOOL *stop))block;
 
-- (NSArray *)rs_arrayWithoutNulls;
+- (NSArray<ObjectType> *)rs_arrayWithoutNulls;
 
 - (NSString *)rs_componentsJoinedByComma;
 
