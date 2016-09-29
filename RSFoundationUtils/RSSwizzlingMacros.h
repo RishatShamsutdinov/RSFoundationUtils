@@ -28,11 +28,11 @@
 #define RS_SWIZZLED_METHOD_WO_ARGS(name) RS_SWIZZLED_IMP(name)(id self, SEL _cmd)
 
 #define RS_SWIZZLE_SEL(clazz, sel, name) \
-    Method name ## Method = class_getInstanceMethod((clazz), (sel));                                  \
+    Method name ## Method = class_getInstanceMethod((clazz), (sel));                                \
                                                                                                     \
     RS_ORIGINAL_IMP(name) = method_setImplementation(name ## Method, (IMP)RS_SWIZZLED_IMP(name))    \
 
-#define RS_SWIZZLE(clazz, selectorName, name) RS_SWIZZLE_SEL((clazz), @selector((selectorName)), (name))
+#define RS_SWIZZLE(clazz, selectorName, name) RS_SWIZZLE_SEL((clazz), @selector((selectorName)), name)
 
 #define RS_INVOKE_ORIGINAL_IMP0(returnType, name) \
     ((returnType (*)(id, SEL))RS_ORIGINAL_IMP(name))(self, _cmd)
