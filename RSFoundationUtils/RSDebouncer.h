@@ -29,4 +29,6 @@ typedef void (^RSDebouncerBlock)();
 
 - (void)debounceWithBlock:(RSDebouncerBlock)block;
 
+- (void)cancel;
+
 @end

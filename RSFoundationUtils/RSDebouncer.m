@@ -87,6 +87,10 @@ static NSTimeInterval const kDefaultDelay = 0.25;
     }];
 }
 
+- (void)cancel {
+    [_timer invalidate];
+}
+
 - (void)dealloc {
     [_timer invalidate];
 }
