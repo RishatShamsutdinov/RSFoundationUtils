@@ -46,29 +46,40 @@
 @implementation NSObject (FoundationUtils)
 
 - (void)rs_setAssociatedObject:(id)object forKey:(const void *)key withPolicy:(objc_AssociationPolicy)policy
-          dependenciesKeyPaths:(NSString *)keyPath, ... {
-
-    NSMutableDictionary *dependencies = [NSMutableDictionary new];
+          dependenciesKeyPaths:(NSString *)keyPath, ...
+{
+    NSMutableArray<NSString *> *keyPaths = [NSMutableArray new];
 
     va_list keyPathsArgs;
     va_start(keyPathsArgs, keyPath);
 
     for (NSString *arg = keyPath; arg != nil; arg = va_arg(keyPathsArgs, NSString *)) {
-        id dependency = [self valueForKeyPath:arg];
+        [keyPaths addObject:arg];
+    }
+
+    va_end(keyPathsArgs);
+
+    [self rs_setAssociatedObject:object forKey:key withPolicy:policy dependenciesKeyPathsFromArray:keyPaths];
+}
+
+- (void)rs_setAssociatedObject:(id)object forKey:(const void *)key withPolicy:(objc_AssociationPolicy)policy
+ dependenciesKeyPathsFromArray:(NSArray<NSString *> *)keyPaths
+{
+    NSMutableDictionary *dependencies = [NSMutableDictionary dictionaryWithCapacity:(keyPaths.count + 1)];
+
+    [keyPaths enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        id dependency = [self valueForKeyPath:obj];
 
         if (!dependency) {
             dependency = [NSNull null];
         }
 
-        dependencies[arg] = [RSWeakObjectContainer containerWithObject:dependency];
-    }
-
-    va_end(keyPathsArgs);
+        dependencies[obj] = [RSWeakObjectContainer containerWithObject:dependency];
+    }];
 
     _RSAssociatedObjectContainer *container = [[_RSAssociatedObjectContainer alloc] initWithDependencies:dependencies];
 
     objc_setAssociatedObject(container, key, object, policy);
-
     objc_setAssociatedObject(self, key, container, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 

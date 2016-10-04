@@ -24,6 +24,9 @@
 - (void)rs_setAssociatedObject:(id)object forKey:(const void *)key withPolicy:(objc_AssociationPolicy)policy
           dependenciesKeyPaths:(NSString *)keyPath, ... NS_REQUIRES_NIL_TERMINATION;
 
+- (void)rs_setAssociatedObject:(id)object forKey:(const void *)key withPolicy:(objc_AssociationPolicy)policy
+ dependenciesKeyPathsFromArray:(NSArray<NSString *> *)keyPaths;
+
 - (id)rs_associatedObjectForKey:(const void *)key;
 
 - (id)rs_copyWithProperties:(SEL)property, ... NS_REQUIRES_NIL_TERMINATION;
