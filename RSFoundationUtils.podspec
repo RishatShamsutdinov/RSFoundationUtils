@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RSFoundationUtils"
-  s.version      = "0.3.15"
+  s.version      = "0.3.16"
   s.summary      = "Utils for Foundation."
 
   s.description  = <<-DESC
@@ -59,13 +59,9 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  s.platform     = :ios, "8.0"
-  s.platform     = :osx, '10.8'
-
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
+  s.ios.deployment_target = "8.0"
+  s.osx.deployment_target = "10.8"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
