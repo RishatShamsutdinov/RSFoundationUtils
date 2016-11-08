@@ -28,7 +28,7 @@
     }
 
     NSUInteger          dataLength  = [self length];
-    NSMutableString     *hexString  = [NSMutableString stringWithCapacity:(dataLength * 2)];
+    NSMutableString     *hexString  = [NSMutableString stringWithCapacity:(dataLength * 2 + 1)];
 
     for (int i = 0; i < dataLength; ++i) {
         [hexString appendString:[NSString stringWithFormat:@"%02hhx", dataBuffer[i]]];

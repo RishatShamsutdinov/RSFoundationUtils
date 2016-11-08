@@ -21,7 +21,7 @@
 @implementation NSArray (FoundationUtils)
 
 - (NSArray *)rs_mapUsingBlock:(id (^)(id, NSUInteger))block {
-    NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self count]];
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:(self.count + 1)];
 
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         id newValue = block(obj, idx);
