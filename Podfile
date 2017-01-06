@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'RSFoundationUtils' do
-pod 'GCDTimer', '~> 1.1'
+
 end
 
 target 'RSFoundationUtilsTests' do

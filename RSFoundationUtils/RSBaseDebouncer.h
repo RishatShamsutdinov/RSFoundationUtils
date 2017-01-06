@@ -20,10 +20,20 @@
 
 typedef void (^RSDebouncerBlock)();
 
-@interface RSDebouncer : NSObject
+@protocol RSDebouncerTimer <NSObject>
+
+- (void)invalidate;
+
+@end
+
+@interface RSBaseDebouncer : NSObject
+
++ (id<RSDebouncerTimer>)scheduleBlock:(void (^)())block withDelay:(NSTimeInterval)delay
+                              onQueue:(dispatch_queue_t)queue;
 
 + (instancetype)debouncerWithDelay:(NSTimeInterval)delay;
 + (instancetype)debouncerWithDelay:(NSTimeInterval)delay queue:(dispatch_queue_t)queue;
+
 - (instancetype)initWithDelay:(NSTimeInterval)delay;
 - (instancetype)initWithDelay:(NSTimeInterval)delay queue:(dispatch_queue_t)queue;
 

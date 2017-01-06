@@ -16,25 +16,30 @@
  *
  */
 
-#import "RSDebouncer.h"
-
-#import <GCDTimer/GCDTimer.h>
-
+#import "RSBaseDebouncer.h"
 #import "RSFoundationUtils.h"
 
 static NSTimeInterval const kDefaultDelay = 0.25;
 
-@interface RSDebouncer () {
+@interface RSBaseDebouncer () {
     NSTimeInterval _delay;
 
-    GCDTimer *_timer;
+    id<RSDebouncerTimer> _timer;
 
     dispatch_queue_t _queue;
 }
 
 @end
 
-@implementation RSDebouncer
+@implementation RSBaseDebouncer
+
++ (id<RSDebouncerTimer>)scheduleBlock:(void (^)())block withDelay:(NSTimeInterval)delay
+                              onQueue:(dispatch_queue_t)queue
+{
+    [self doesNotRecognizeSelector:_cmd];
+
+    return nil;
+}
 
 + (instancetype)debouncerWithDelay:(NSTimeInterval)delay {
     return [self debouncerWithDelay:delay queue:NULL];
@@ -80,11 +85,11 @@ static NSTimeInterval const kDefaultDelay = 0.25;
 
     typeof(self) __weak weakSelf = self;
 
-    _timer = [GCDTimer scheduledTimerWithTimeInterval:_delay repeats:NO queue:queue block:^{
+    _timer = [[self class] scheduleBlock:^{
         voidWithStrongSelf(weakSelf, ^(typeof(self) self) {
             block();
         });
-    }];
+    } withDelay:_delay onQueue:queue];
 }
 
 - (void)cancel {
