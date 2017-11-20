@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^RSDebouncerBlock)();
+typedef void (^RSDebouncerBlock)(void);
 
 @protocol RSDebouncerTimer <NSObject>
 
@@ -28,7 +28,7 @@ typedef void (^RSDebouncerBlock)();
 
 @interface RSBaseDebouncer : NSObject
 
-+ (id<RSDebouncerTimer>)scheduleBlock:(void (^)())block withDelay:(NSTimeInterval)delay
++ (id<RSDebouncerTimer>)scheduleBlock:(void (^)(void))block withDelay:(NSTimeInterval)delay
                               onQueue:(dispatch_queue_t)queue;
 
 + (instancetype)debouncerWithDelay:(NSTimeInterval)delay;

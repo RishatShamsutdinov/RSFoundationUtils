@@ -31,6 +31,6 @@
 
 - (id)rs_copyWithProperties:(SEL)property, ... NS_REQUIRES_NIL_TERMINATION;
 
-- (void)rs_changeValuesUsingBlock:(void (^)())block forKeyPaths:(NSString *)keyPath, ... NS_REQUIRES_NIL_TERMINATION;
+- (void)rs_changeValuesUsingBlock:(void (^)(void))block forKeyPaths:(NSString *)keyPath, ... NS_REQUIRES_NIL_TERMINATION;
 
 @end

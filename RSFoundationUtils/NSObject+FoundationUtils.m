@@ -129,7 +129,7 @@
     return result;
 }
 
-- (void)rs_changeValuesUsingBlock:(void (^)())block forKeyPaths:(NSString *)keyPath, ... NS_REQUIRES_NIL_TERMINATION {
+- (void)rs_changeValuesUsingBlock:(void (^)(void))block forKeyPaths:(NSString *)keyPath, ... NS_REQUIRES_NIL_TERMINATION {
     va_list keyPathAp;
     va_start(keyPathAp, keyPath);
 

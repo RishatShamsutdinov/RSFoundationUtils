@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^RSRestorationBlock)();
+typedef void (^RSRestorationBlock)(void);
 
 @interface RSRestorer : NSObject
 

@@ -33,7 +33,7 @@ static NSTimeInterval const kDefaultDelay = 0.25;
 
 @implementation RSBaseDebouncer
 
-+ (id<RSDebouncerTimer>)scheduleBlock:(void (^)())block withDelay:(NSTimeInterval)delay
++ (id<RSDebouncerTimer>)scheduleBlock:(void (^)(void))block withDelay:(NSTimeInterval)delay
                               onQueue:(dispatch_queue_t)queue
 {
     [self doesNotRecognizeSelector:_cmd];
