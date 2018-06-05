@@ -61,11 +61,20 @@ static void RS_SWIZZLED_METHOD(removeObserverForName, id observer, NSString *nam
 }
 
 + (void)load {
-    RS_SWIZZLE([self class], removeObserver:, removeObserver);
-    RS_SWIZZLE([self class], removeObserver:name:object:, removeObserverForName);
+    if (@available(iOS 9.0, macOS 10.11, *)) {
+        // do nothing
+    } else {
+        RS_SWIZZLE([self class], removeObserver:, removeObserver);
+        RS_SWIZZLE([self class], removeObserver:name:object:, removeObserverForName);
+    }
 }
 
 - (void)rs_addObserver:(id)observer selector:(SEL)selector name:(NSString *)name object:(id)object {
+    if (@available(iOS 9.0, macOS 10.11, *)) {
+        [self addObserver:observer selector:selector name:name object:object];
+        return;
+    }
+
     NSMethodSignature *sig = [observer methodSignatureForSelector:selector];
 
     if (sig.numberOfArguments > 3) {
