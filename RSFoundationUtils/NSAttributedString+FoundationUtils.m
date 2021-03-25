@@ -38,7 +38,7 @@
         [result addAttribute:key value:obj range:range];
     }];
 
-    return result;
+    return [result copy];
 }
 
 @end

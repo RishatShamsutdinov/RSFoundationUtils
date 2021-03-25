@@ -25,7 +25,7 @@
 
     [result addEntriesFromDictionary:dict];
 
-    return result;
+    return [result copy];
 }
 
 - (NSDictionary *)rs_dictionaryWithMapping:(NSDictionary *)mapping {
@@ -39,7 +39,7 @@
         }
     }];
 
-    return result;
+    return [result copy];
 }
 
 @end

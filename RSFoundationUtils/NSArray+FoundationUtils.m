@@ -33,7 +33,7 @@
         [result addObject:newValue];
     }];
 
-    return result;
+    return [result copy];
 }
 
 - (NSArray *)rs_filteredArrayUsingBlock:(BOOL (^)(id))block {
